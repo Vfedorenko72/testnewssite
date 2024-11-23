@@ -4,6 +4,7 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 
 import static com.codeborne.selenide.Selenide.$x;
+import static com.codeborne.selenide.Selenide.open;
 
 abstract class BaseTest {
     private final static String BECK_URL = "https://api.news.academy.dunice.net/";
@@ -26,8 +27,9 @@ abstract class BaseTest {
      * Вход на главную страницу
      */
     public static void entrance() {
-        Selenide.open(APP_URL);
+        open(APP_URL);
         $x("//input[@id=\":r0:\"]").setValue(BECK_URL);
         $x("//button").click();
+        int i = 1;
     }
 }
