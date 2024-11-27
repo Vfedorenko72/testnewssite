@@ -9,13 +9,15 @@ public class MainPage {
     final SelenideElement clearUrlToBeckElement = $x("//button[(3)]");
 
     final SelenideElement emailIn = $x("//input[@placeholder = 'Почта']");
-    final SelenideElement passwordIn = $x("//input[@placeholder = 'Пароль'");
+    final SelenideElement passwordIn = $x("//input[@placeholder = 'Пароль']");
 
     final SelenideElement emailUp = $x("//input[@placeholder = 'Почта']");
     final SelenideElement passwordUp = $x("//input[@placeholder = 'Пароль']");
 
     final SelenideElement submit = $x("//button[@type=\"submit\"]");
     final SelenideElement dudesdey = $x("//a[@href=\"/posts\"]");
+
+    final SelenideElement userprofileElement = $x("//img");
 
 
     final String login = "Selenide3@Test.ru";
@@ -34,10 +36,16 @@ public class MainPage {
 
     public void singIn() {
         singInElement.click();
-        emailUp.setValue(login);
-        passwordUp.setValue(password);
+        emailIn.setValue(login);
+        passwordIn.setValue(password);
         submit.click();
 
 
     }
+
+    public void userprofile() {
+        userprofileElement.click();
+    }
+
+
 }
