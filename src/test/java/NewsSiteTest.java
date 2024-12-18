@@ -30,8 +30,14 @@ public class NewsSiteTest extends BaseTest {
         userProfile.userName.shouldHave(value("Selenide"));
         userProfile.UserSurname.shouldHave(value("Selenium"));
         userProfile.UserEmail.shouldHave(value("Selenide3@Test.ru"));
+
+
+
     }
 
+    /**
+     *
+     */
     @Test
     public void settingUserInformation() {
         MainPage mainPage = new MainPage();

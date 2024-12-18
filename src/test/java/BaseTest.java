@@ -1,7 +1,6 @@
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.Selenide;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 
 import static com.codeborne.selenide.Selenide.$x;
 import static com.codeborne.selenide.Selenide.open;
@@ -13,13 +12,13 @@ abstract class BaseTest {
     public static void setUp() {
         Configuration.browser = "chrome";
     }
-    @BeforeAll
-    public static void init() {
+    @BeforeEach
+    public void init() {
         setUp();
         entrance();
     }
-    @AfterAll
-    public static void tearDown() {
+    @AfterEach
+    public void tearDown() {
 
     }
 
